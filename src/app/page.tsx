@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Armchair, Mail, Phone } from "lucide-react";
 import { useEffect, useLayoutEffect, useState } from "react";
+import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -75,22 +76,26 @@ export default function Home() {
           transitionDuration={500}
           removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}>
           {[...Array(6)].map((item, idx) => (
-            <div key={`item-${idx}`} className="w-[300px] mx-auto gap-4 flex flex-col">
-              <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
-              <div className="">
-                <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
-                <span className="text-sm"> Modelo #1</span>
+            <Link key={`item-${idx}`} href={`/1`}>
+              <div className="w-[300px] px-1 gap-4 flex flex-col">
+                <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
+                <div className="">
+                  <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
+                  <span className="text-sm"> Modelo #1</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
           {[...Array(6)].map((item, idx) => (
-            <div key={`item1-${idx}`} className=" mx-auto gap-4 flex flex-col">
-              <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
-              <div className="">
-                <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
-                <span className="text-sm"> Modelo #1</span>
+            <Link key={`item1-${idx}`} href={`/2`}>
+              <div key={`item1-${idx}`} className="px-1 gap-4 flex flex-col">
+                <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
+                <div className="">
+                  <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
+                  <span className="text-sm"> Modelo #1</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Carousel>
       </section>
@@ -111,31 +116,37 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {[...Array(2)].map((item, idx) => (
-            <div key={`item3-${idx}`} className="w-[300px] px-1 gap-4 flex flex-col">
-              <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
-              <div className="">
-                <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
-                <span className="text-sm"> Modelo #1</span>
+            <Link key={`item3-${idx}`} href={`/1`}>
+              <div className="w-[300px] px-1 gap-4 flex flex-col">
+                <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
+                <div className="">
+                  <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
+                  <span className="text-sm"> Modelo #1</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
           {[...Array(2)].map((item, idx) => (
-            <div key={`item4-${idx}`} className="px-1 gap-4 flex flex-col">
-              <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
-              <div className="">
-                <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
-                <span className="text-sm"> Modelo #1</span>
+            <Link key={`item4-${idx}`} href={`/2`}>
+              <div className="px-1 gap-4 flex flex-col">
+                <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
+                <div className="">
+                  <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
+                  <span className="text-sm"> Modelo #1</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
           {[...Array(4)].map((item, idx) => (
-            <div key={`item5-${idx}`} className="px-1 gap-4 flex flex-col">
-              <Image width={300} height={300} src="/product3.png" alt="product1" className="rounded aspect-square" />
-              <div className="">
-                <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
-                <span className="text-sm"> Modelo #1</span>
+            <Link key={`item5-${idx}`} href={`/3`}>
+              <div className="px-1 gap-4 flex flex-col">
+                <Image width={300} height={300} src="/product3.png" alt="product1" className="rounded aspect-square" />
+                <div className="">
+                  <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
+                  <span className="text-sm"> Modelo #1</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
