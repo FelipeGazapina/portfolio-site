@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Mail, Menu, Phone } from "lucide-react";
 import Image from "next/image";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ export default function RootLayout({
           <p className="text-sm text-gray-800/60 mb-0">made by lypes.agency</p>
         </footer>
         <a> <Image className="fixed bottom-10 right-10" src={'/whatsapp.png'} width={50} height={50} alt="contato whatsapp" /> </a>
+        <SpeedInsights />
       </body>
     </html>
   );
