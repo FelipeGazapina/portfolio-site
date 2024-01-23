@@ -26,7 +26,7 @@ export default function RootLayout({
             <li>Sobre n&oacute;s</li>
             <li>Contato</li>
           </ul>
-          <Menu className="text-white h-10 w-10 md:hidden" />
+          <Menu className="text-white h-10 w-10 md:hidden" />``
         </nav>
         {children}
 

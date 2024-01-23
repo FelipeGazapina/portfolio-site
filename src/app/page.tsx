@@ -63,8 +63,8 @@ export default function Home() {
           keyBoardControl={true}
           transitionDuration={500}
           removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}>
-          {[...Array(6)].map(() => (
-            <div className="w-[300px] mx-auto gap-4 flex flex-col">
+          {[...Array(6)].map((item, idx) => (
+            <div key={`item-${idx}`} className="w-[300px] mx-auto gap-4 flex flex-col">
               <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
               <div className="">
                 <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
@@ -72,8 +72,8 @@ export default function Home() {
               </div>
             </div>
           ))}
-          {[...Array(6)].map(() => (
-            <div className=" mx-auto gap-4 flex flex-col">
+          {[...Array(6)].map((item, idx) => (
+            <div key={`item1-${idx}`} className=" mx-auto gap-4 flex flex-col">
               <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
               <div className="">
                 <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
@@ -89,8 +89,8 @@ export default function Home() {
         </h2>
         <span>Selecione um produto das op&ccedil;&otilde;es de categorias</span>
         <div className="grid grid-cols-2 md:grid-cols-4 my-10 gap-x-10">
-          {[...Array(window.innerWidth > 640 ? 4 : 2)].map(() => (
-            <div className="w-40 h-40 bg-gray-800/10 rounded-lg 
+          {[...Array(window.innerWidth > 640 ? 4 : 2)].map((item, idx) => (
+            <div key={`item2-${idx}`} className="w-40 h-40 bg-gray-800/10 rounded-lg 
               flex flex-col items-center justify-center hover:scale-105
               shadow-lg">
               <Armchair className="w-20 h-20" />
@@ -99,8 +99,8 @@ export default function Home() {
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {[...Array(2)].map(() => (
-            <div className="w-[300px] px-1 gap-4 flex flex-col">
+          {[...Array(2)].map((item, idx) => (
+            <div key={`item3-${idx}`} className="w-[300px] px-1 gap-4 flex flex-col">
               <Image width={300} height={300} src="/product1.png" alt="product1" className="rounded aspect-square " />
               <div className="">
                 <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
@@ -108,8 +108,8 @@ export default function Home() {
               </div>
             </div>
           ))}
-          {[...Array(2)].map(() => (
-            <div className="px-1 gap-4 flex flex-col">
+          {[...Array(2)].map((item, idx) => (
+            <div key={`item4-${idx}`} className="px-1 gap-4 flex flex-col">
               <Image width={300} height={300} src="/product2.png" alt="product1" className="rounded aspect-square" />
               <div className="">
                 <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
@@ -117,8 +117,8 @@ export default function Home() {
               </div>
             </div>
           ))}
-          {[...Array(4)].map(() => (
-            <div className="px-1 gap-4 flex flex-col">
+          {[...Array(4)].map((item, idx) => (
+            <div key={`item5-${idx}`} className="px-1 gap-4 flex flex-col">
               <Image width={300} height={300} src="/product3.png" alt="product1" className="rounded aspect-square" />
               <div className="">
                 <h3>Estante cl&aacute;ssica com adere&ccedil;os</h3>
