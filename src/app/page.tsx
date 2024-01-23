@@ -3,6 +3,7 @@ import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Armchair, Mail, Phone } from "lucide-react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const responsive = {
   superLargeDesktop: {
@@ -26,6 +27,16 @@ const responsive = {
 
 
 export default function Home() {
+  const [innerWidth, setInnerWidth] = useState(3000);
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+    if (typeof window != undefined) {
+      window.addEventListener("resize", handleResize);
+      handleResize();
+    }
+  }, [innerWidth])
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
 
@@ -89,7 +100,7 @@ export default function Home() {
         </h2>
         <span>Selecione um produto das op&ccedil;&otilde;es de categorias</span>
         <div className="grid grid-cols-2 md:grid-cols-4 my-10 gap-x-10">
-          {[...Array(window.innerWidth > 640 ? 4 : 2)].map((item, idx) => (
+          {[...Array(innerWidth > 640 ? 4 : 2)].map((item, idx) => (
             <div key={`item2-${idx}`} className="w-40 h-40 bg-gray-800/10 rounded-lg 
               flex flex-col items-center justify-center hover:scale-105
               shadow-lg">
