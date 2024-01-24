@@ -48,7 +48,7 @@ export default function Home() {
           <div></div>
           <div className="text-white flex flex-col gap-5">
             <h1 className={`text-[48px] lg:text-[64px] font-bold lg:text-right`}>
-              Pa&ccedil;as &uacute;nicas e estilosas para sua casa
+              Pe&ccedil;as &uacute;nicas e estilosas para sua casa
             </h1>
             <p className="text-md lg:text-right lg:text-lg">
               Explore a excelência dos nossos produtos e transforme seu estúdio com estilo incomparável. Venha descobrir as opções que tornarão seu espaço único e perfeito. Estilize seu ambiente de trabalho da melhor forma possível conosco.
